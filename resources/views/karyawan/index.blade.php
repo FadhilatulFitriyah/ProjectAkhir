@@ -3,6 +3,11 @@
 @section('content')
 <div class="container">
     <a class="btn btn-primary" href="/karyawan/create">Add Karyawan</a>
+    <form action="{{route('logout')}}" method="POST" class="d-flex" role="search">
+        @csrf
+        @method('DELETE')
+        <button class="btn btn-danger" type="submit">Logout</button>
+    </form>
     <table class="table table-hover">
         <tr>
             <th>ID</th>
