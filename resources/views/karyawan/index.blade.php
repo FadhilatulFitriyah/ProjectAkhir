@@ -27,12 +27,13 @@
             <td>{{$k->jabatan}}</td>
             <td>{{$k->alamat}}</td>
             <td>
-                <div class="btn-group" role="group" aria-label="Basic outlined example">
-                    <a class="btn btn-warning" href="/karyawan/{{$k->id}}/edit">Edit</a>
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <a href="/karyawan/{{$k->id}}/edit" class="btn btn-warning">Edit</a>
                     <form action="/karyawan/{{$k->id}}" method="POST">
                         @csrf
                         @method('delete')
-                        <input class="btn btn-danger" type="submit" value="Delete" onclick="confirm('Sure ?')">
+                        <input class="btn btn-danger" type="submit" value="Delete"
+                            onclick="confirm('Apakah Anda Yakin Akan Menghapus Data Ini ?')">
                     </form>
                 </div>
             </td>
