@@ -17,7 +17,7 @@
         <div class="col-lg-4">
             <div class="card">
                 <div class="class-header">
-                    <h1 class="card-title">Register</h1>
+                    <h1 class="text-center my-3">Register</h1>
                 </div>
                 <div class="card-body">
                     @if(Session::has('success'))
@@ -27,23 +27,25 @@
                     @endif
                     <form action="{{route('register')}}" method="POST">
                         @csrf
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Nama</label>
-                            <input type="name" name="name" class="form-cotrol" id="name"
+                        <div class="form-floating mb-3">
+                            <input type="name" name="name" class="form-control" id="floatingname"
                                 placeholder="fadilatul fitriyah" required>
+                            <label for="floatingname" class="form-label">Nama</label>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address</label>
-                            <input type="email" name="email" class="form-cotrol" id="email"
+                        <div class="form-floating mb-3">
+                            <input type="email" name="email" class="form-control" id="floatingemail"
                                 placeholder="nama@example.com" required>
+                            <label for="floatingemail" class="form-label">Email Address</label>
                         </div>
-                        <div class="mb-3">
-                            <label for="password" class="form-label">password</label>
-                            <input type="password" name="password" class="form-cotrol" id="password" required>
+                        <div class="form-floating mb-3">
+                            <input type="password" name="password" class="form-control" id="floatingpassword"
+                                placeholder="Password" required>
+                            <label for="floatingpassword" class="form-label">password</label>
                         </div>
                         <div class="mb-3">
                             <div class="d-grid">
-                                <button class="btn btn-primary">Register</button>
+                                <button class="btn btn-primary">Register</button><br>
+                                <a class="text-center my-2" href="\login">Sudah Memiliki Akun</a>
                             </div>
                         </div>
                     </form>
